@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Formulario — Mi App Flask{% endblock %}
+{% block content %}
+  <h2>Formulario</h2>
+  <form method="post" action="{{ url_for('procesar') }}" class="form">
+    <label>Nombre
+      <input type="text" name="nombre" required>
+    </label>
+    <label>Edad
+      <input type="number" name="edad" min="0" required>
+    </label>
+    <button type="submit">Enviar</button>
+  </form>
+{% endblock %}
